@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Login Form</title>
+    <style>
+      body {
+        background-color: #d2b48c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .login-container {
+        background-color: #fff;
+        width: 300px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .login-container h2 {
+        background-color: #fffacd;
+        margin: -20px -20px 20px -20px;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        border-bottom: 1px solid #ddd;
+      }
+      .login-container label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      .login-container input[type="text"],
+      .login-container input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        background-color: #ffffe0;
+      }
+      .login-container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #ffa500;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .login-container input[type="submit"]:hover {
+        background-color: #ff8c00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login Form</h2>
+      <form>
+        <label for="username">UserName :</label>
+        <input type="text" id="username" name="username" value="admin" />
+        <label for="password">Password :</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value="........."
+        />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>
