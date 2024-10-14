@@ -20,34 +20,21 @@
          display: flex;
          align-items: center;
          justify-content: center;
+         background: #F08080;
     }
     .container{
         display:flex;
         flex-direction:column;
         width:300px;
         padding: 15px;
-        border: 1px solid red;
+        border: 1px solid black;
+        background: #C9A9A6;
         border-radius: 5px;
     }
     input{
         margin: 5px 0px;
         height: 35px;
         padding:7px;s
-    }
-
-    button{
-        height: 35px;
-        margin: 5px 0px;
-        align-items: center;
-        padding:7px;
-        border:none; 
-        background-color:red;
-        border-radius: 5px;
-        color:black;
-    }
-    button:hover{
-        background-color:red;
-        color:black;
     }
 </style>
 <body>
@@ -60,14 +47,16 @@
                 <label>Password</label><br>
                 <input type="Password"
                 placeholder="password">
-                <button>Login</button>
-                <p>
-                <a href="#">Forgot Password</a>   
-                </p>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login"></input>
+        <div class="Signup_link"></div>
+        Not a member? <a href="#">Signup</a>
+            </div>
             </div>
             </div>
 </body>
-</html>
+</html>     
+
 
         
-        
+    
