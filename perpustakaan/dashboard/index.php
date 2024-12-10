@@ -1,4 +1,9 @@
 <?php 
+session_start();
+if(!isset($_SESSION['is_login'])){
+    header('location:../login.php');
+}
+
 if(!isset($_REQUEST['page'])){
     header('location:index.php?page=dashboard');
     exit();
