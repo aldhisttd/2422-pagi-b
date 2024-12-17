@@ -1,8 +1,15 @@
+<?php 
+$kode = $_REQUEST['kode'];
+include('../assets/koneksi.php');
+$query = "SELECT * FROM kategori WHERE kode='$kode'";
+$q = mysqli_query($koneksi, $query);
+$data = mysqli_fetch_array($q);
+?>
 <div class="row">
     <div class="col-12">
 
         <div class="page-title-box d-flex align-items-center justify-content-between">
-            <h4 class="mb-0">Form Kategori</h4>
+            <h4 class="mb-0">Form Edit Kategori</h4>
         </div>
 
         <div class="row">
@@ -12,7 +19,7 @@
 
                         
                         
-                        <form action="process/kategori-form-process.php" method="POST">
+                        <form action="process/kategori-form-edit-process.php" method="POST">
 
                             <div class="col-6">
 
@@ -40,17 +47,11 @@
 
                                 <div class="form-group">
                                     <label for="">Kode Kategori</label>
-                                    <input name="kode" type="text" class="form-control">
-                                    <?php 
-                                        if(isset($_SESSION['msg']['error_kode'])){
-                                            echo '<span class="text-danger">'.$_SESSION['msg']['error_kode'].'</span>';
-                                        }
-                                    ?>
-
+                                    <input readonly value="<?= $data['kode'] ?>" name="kode" type="text" class="form-control bg-light">
                                 </div>
                                 <div class="form-group">
                                     <label for="">Nama Kategori</label>
-                                    <input name="nama" type="text" class="form-control">
+                                    <input value="<?= $data['nama'] ?>" name="nama" type="text" class="form-control">
                                     <?php 
                                         if(isset($_SESSION['msg']['error_nama'])){
                                             echo '<span class="text-danger">'.$_SESSION['msg']['error_nama'].'</span>';
@@ -59,7 +60,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" name="btn-submit" class="btn btn-primary">Tambah Data</button>
+                                    <button type="submit" name="btn-submit" class="btn btn-primary">Simpan Perubahan</button>
                                 </div>
                             </div>
 
